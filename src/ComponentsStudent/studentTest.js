@@ -325,7 +325,7 @@ class solveTest extends Component {
                         {this.state.heldOn && !Test.testSolvedStatus && <h3 style={{ color: "red" }} className="no-margin-padding">Your Test Will be on {Test.date}-{Test.testTime}</h3>}
 
                         {this.state.timeout && !Test.testSolvedStatus && <h3 style={{ color: "red" }} className="no-margin-padding">Timeout Not Submitted </h3>}
-                        {this.state.timeout && Test.testSolvedStatus && <h3 style={{ color: "green" }} className="no-margin-padding">Submitted </h3>}
+                        {this.state.timeout && Test.testSolvedStatus && <h3 style={{ color: "#29c129" }} className="no-margin-padding">Submitted </h3>}
                         {!this.state.timeout && !Test.testSolvedStatus && !this.state.heldOn && <Countdown date={Date.now() + this.state.remainingTime * 60000} onComplete={() => {
                             Test.testSolvedStatus = true;
                             this.submit(Test)

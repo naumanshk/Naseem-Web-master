@@ -417,10 +417,10 @@ class teacherDetails extends Component {
                         </div>
                         <hr></hr>
                         <div class="student-attendance-titles">
-                            <h3 class="purple center regular">Names</h3>
-                            <h3 class="purple center regular">Present</h3>
-                            <h3 class="purple center regular">Absent</h3>
-                            <h3 class="purple center regular">Leave</h3>
+                            <h3 class="purple center regular x-small-font">Names</h3>
+                            <h3 class="purple center regular x-small-font">Present</h3>
+                            <h3 class="purple center regular x-small-font">Absent</h3>
+                            <h3 class="purple center regular x-small-font">Leave</h3>
                         </div>
 
                         <div class='student-attendance-container'>

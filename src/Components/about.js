@@ -269,7 +269,6 @@ class aboutComponent extends Component {
 
                     </Box>
                     <Box  style={{textAlign:'center'}} display={{ xs: 'block', sm: 'none' }}>
-
                     <img src={Group_2} style={{marginTop:'5px !important'}} width="200" ></img>
 
                     </Box>

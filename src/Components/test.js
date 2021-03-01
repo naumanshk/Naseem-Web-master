@@ -352,7 +352,7 @@ class test extends Component {
 
                 <h1 className="grey center">Submission Record</h1>
                 <div className="tests-status-container">
-                    <div className="tests-status-grid">
+                    <div className="tests-status-grid center">
                         <div></div>
                         <div>
                             <h2 className='font'>Students</h2>
@@ -376,7 +376,7 @@ class test extends Component {
                                     }
                                 }}
                             >
-                                <div className="tests-status-grid" >
+                                <div className="tests-status-grid center x-small-font" >
                                     <div>
                                         <img src={studentimg} className="student-icon" ></img>
                                     </div>
