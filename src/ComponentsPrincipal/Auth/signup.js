@@ -3,8 +3,10 @@ import '../../App.css';
 import '../../config';
 import * as firebase from 'firebase'
 import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
-import naseemlogo from '../../ImagePrinci/logo-trans.png'
+import naseemlogo from '../../ImagePrinci/naseemlogo.png'
 import loginImg from '../../Images/naseemloginpagelogo.png'
+import illustration from '../../ImagePrinci/princi_illus.png'
+
 import { ClipLoader } from "react-spinners";
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -19,7 +21,7 @@ class signupComponent extends Component {
     constructor() {
         super();
         this.state = {
-            verified: false,
+            verified: true,
             user: null,
             name: '',
             email: '',
@@ -138,7 +140,7 @@ class signupComponent extends Component {
                         //userImage: "no",
                         userName: this.state.name,
                         userType: 0,
-                        assoassosiated:false
+                        assoassosiated: false
 
 
                     }).then(() => {
@@ -161,22 +163,23 @@ class signupComponent extends Component {
         return (
             <div>
 
-                {this.state.verified == true && <div style={{ backgroundColor: 'white', maxWidth: 400, margin: 'auto', marginTop: '10vh', marginBottom: '10vh', textAlign: 'center', borderRadius: 10, boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.3)' }} id="firebaseui-auth-container"></div>}
+                {this.state.verified == true && <div style={{ backgroundColor: 'white', maxWidth: 'fit-content', margin: 'auto', marginTop: '10vh', marginBottom: '10vh', textAlign: 'center', borderRadius: 10, boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.3)' }} id="firebaseui-auth-container"></div>}
 
                 {this.state.verified == false && <div className="half-grid-t">
 
 
-                    <div className="center naseemlogo background-img-p">
-                        <div class='gradiant-p'>
-                            <h1 className="text-center white bold login-title" style={{ paddingTop: '400px' }}>Welcome To Naseem Principal</h1>
+                    <div className="center naseemlogo">
+                        <div style={{ height: '60%', width: '80%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', margin: 'auto' }} class=''>
+                            <img className="illustration" src={illustration} alt="logo" ></img>
+                            <h1 className="text-center purple bold login-title">Welcome To Naseem Principal</h1>
 
                         </div>
 
 
                     </div>
 
-                     <div className="center background-principal">
-                        <img className="logo" src={naseemlogo} alt="logo" ></img>
+                    <div className="center background-principal">
+                        <img className="logo" style={{borderRadius:'12px'}} src={naseemlogo} alt="logo" ></img>
                         <h1 className="white regular" >Get Started Now</h1>
                         <div className="login-container" >
                             <ClipLoader
@@ -260,9 +263,9 @@ class signupComponent extends Component {
                                         console.log(e.target.value)
                                     }}>
                                         <div className="white flex">
-                                            <FormLabel style={{ marginTop: '12px', marginRight: '20px',color:'white' }} component="legend">Select Gender</FormLabel>
-                                            <FormControlLabel value="male" control={<Radio style={{color:'white'}} />} label="Male" />
-                                            <FormControlLabel value="female" control={<Radio style={{color:'white'}} />} label="Female" />
+                                            <FormLabel style={{ marginTop: '12px', marginRight: '20px', color: 'white' }} component="legend">Select Gender</FormLabel>
+                                            <FormControlLabel value="male" control={<Radio style={{ color: 'white' }} />} label="Male" />
+                                            <FormControlLabel value="female" control={<Radio style={{ color: 'white' }} />} label="Female" />
 
 
                                         </div>
@@ -276,9 +279,9 @@ class signupComponent extends Component {
 
 
 
-                            <button className="login-btn-p" style={{ boxShadow:'0px 2px 5px black'}} onClick={() => { this.register() }} >REGISTER</button>
+                            <button className="login-btn-p" style={{ boxShadow: '0px 2px 5px black' }} onClick={() => { this.register() }} >REGISTER</button>
 
-                            <p style={{ paddingTop: '20px', color:'white'}} >Already Have An Account? <Link to='/principallogin'>Login</Link></p>
+                            <p style={{ paddingTop: '20px', color: 'white' }} >Already Have An Account? <Link to='/principallogin'>Login</Link></p>
                         </div>
 
 

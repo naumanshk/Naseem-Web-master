@@ -3,7 +3,7 @@ import './principal.css';
 import '../config';
 import * as firebase from 'firebase'
 import Announcements from './announcementsPrincipal'
-import principalHeader from '../ImagePrinci/Dashboard-principal.jpg'
+import principalHeader from '../ImagePrinci/coverP.png'
 import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';

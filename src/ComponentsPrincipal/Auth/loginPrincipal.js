@@ -4,12 +4,12 @@ import '../../config';
 import {fire} from '../../config'
 import* as firebase from 'firebase'
 import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
-import naseemlogo from '../../ImagePrinci/logo-trans.png'
+import naseemlogo from '../../ImagePrinci/naseemlogo.png'
 import loginImg from '../../Images/naseemloginpagelogo.png'
 // import userEmailImg from '../../Images/useremail.png'
 // import lock from '../../Images/lock.png'
 import { ClipLoader } from "react-spinners";
-
+import illustration from '../../ImagePrinci/princi_illus.png'
 
 class loginPrincipalComponent extends Component {
     constructor(){
@@ -100,9 +100,11 @@ class loginPrincipalComponent extends Component {
             
             <div className="half-grid-t">
 
-                <div className="center naseemlogo background-img-p">
-                    <div class='gradiant-p'>
-                    <h1 className="text-center white bold login-title" style={{paddingTop: '400px'}}>Welcome To Naseem Principal</h1>
+                <div className="center naseemlogo">
+                    <div style={{height:'60%',width:'80%' ,display:'flex', flexDirection:'column', justifyContent:'flex-end', margin:'auto'}} class=''>
+                    <img className="illustration" src={illustration}  alt="logo" ></img>
+
+                    <h1 className="text-center bold login-title purple" >Welcome To Naseem Principal</h1>
 
                     </div>
                        
@@ -113,7 +115,7 @@ class loginPrincipalComponent extends Component {
 
                     <div class=''>
 
-                    <img className="logo" src={naseemlogo} alt="logo" ></img>
+                    <img className="logo" style={{borderRadius:'12px'}} src={naseemlogo} alt="logo" ></img>
                     <h1 className="white regular heading-white-mobile" >Get Started Now</h1>
                     <div className="login-container " >
                         <ClipLoader

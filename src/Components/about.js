@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import mycopys from '../Images/mycopys.png'
+import mycopys from '../Images/landingCover.png'
 
 import team from '../Images/team.png'
 import inventory from '../Images/inventory.png'
@@ -233,7 +233,7 @@ class aboutComponent extends Component {
                 <Container style={{marginTop:'150px'}}>
                     <Grid container>
                         <Grid md={6} xs={12} style={{textAlign:'center',alignSelf:'center'}}>
-                        <img src={Group_1} style={{marginTop:'10%',width:'50%'}} ></img>
+                        <img src={Group_1}  style={{marginTop:'10%',width:'50%'}} ></img>
 
 
                         </Grid>
@@ -260,17 +260,17 @@ class aboutComponent extends Component {
                     </div>
 
                 </div> */}
-
-                <div style={{marginTop:'90px'}}>
-                    <h2 style={{paddingBottom:'50px'}} className="text-succ   center" id="products">Our Products</h2>
+                <div id="products"></div>
+                <div  style={{marginTop:'90px'}}>
+                    <h2 style={{paddingBottom:'50px'}} className="text-succ   center" >Our Products</h2>
                     <Box  style={{textAlign:'center'}} display={{ xs: 'none', sm: 'block' }}>
-                        <img src={Group_2} style={{marginTop:'10px !important'}} className="about-us-img" ></img>
+                        <img src={Group_2} style={{marginTop:'5px !important'}} className="about-us-img" ></img>
 
 
                     </Box>
                     <Box  style={{textAlign:'center'}} display={{ xs: 'block', sm: 'none' }}>
 
-                    <img src={Group_2} style={{marginTop:'10px !important'}} width="200" ></img>
+                    <img src={Group_2} style={{marginTop:'5px !important'}} width="200" ></img>
 
                     </Box>
 
@@ -279,9 +279,10 @@ class aboutComponent extends Component {
                     on our customised platform. These powerful learning analytics are a first step towards contextualised learning experiences for each individual: learning the same content, 
                     but with different pedagogies in accordance with their needs.</h2>
                  
+                    <div id="about"></div>
 
                     <Container  style={{marginTop:'150px'}}>
-                    <h2 id="about" className="text-succ  center" >One Platform Customised for you</h2>
+                    <h2  className="text-succ  center" >One Platform Customised for you</h2>
 
                         <Grid container className='OurPlatform' style={{marginTop:'50px'}}>
                         <Grid md={3} sm={12} className="text-center">
@@ -415,7 +416,7 @@ class aboutComponent extends Component {
                     </ItemsCarousel> */}
                 </Container>
                 <Container maxWidth="md" style={{marginTop:'50px'}} >
-                <Box component="span" display={{ xs: 'none', sm: 'block' }}>
+                <Box component="span" display={{ xs: 'none', sm: 'none', md:'block' }}>
 
                 <Grid container>
                         <Grid md={6} xs={12} className="text-right" style={{alignSelf:'center'}}>
@@ -446,14 +447,14 @@ class aboutComponent extends Component {
                             
                             </div>
                         </Grid>
-                        <Grid md={6} xs={12} style={{textAlign:'right'}}>
+                        <Grid md={6} xs={12} style={{textAlign:'start'}}>
                             
                             <img src={online_learning} width='150'></img>
 
                         </Grid>
                 </Grid>
                 </Box>
-                <Box component="span" display={{ xs: 'block', sm: 'none' }}>
+                <Box component="span" display={{ xs: 'block', sm: 'block' ,md:'none'}}>
 
                     <Grid container>
                             <Grid md={6} xs={12} className="text-center">
@@ -492,29 +493,29 @@ class aboutComponent extends Component {
                 </Container>
 
                 <div style={{backgroundColor: '#3AB639'}}>
-                      <Grid style={{paddingLeft:'50px'}} container>
-                          <Grid md={4} className="text-sm-center" xs={12}>
+                      <Grid  container>
+                          <Grid md={4} className="center" xs={12}>
                               <h3 className="white" style={{marginBottom:'0px'}}>Naseem Education</h3>
-                              <h4 className="white" style={{fontWeight:'300',marginTop:'10px',marginBottom:'10px'}}>Office 1206,National Science & <br/>
+                              <h4 className="white" style={{fontWeight:'500',marginTop:'10px',marginBottom:'10px'}}>Office 1206,National Science & <br/>
                                Technology Park,H-12, Islamabad</h4>
-                               <h4 className="white" style={{fontWeight:'300',marginTop:'10px'}}>+92 306 5401886</h4>
+                               <h4 className="white" style={{fontWeight:'500',marginTop:'10px'}}>+92 306 5401886</h4>
 
                           </Grid>
                           <Grid md={4} xs={12} id='features' style={{textAlign:'center'}}>
                             <h3 className="white" style={{marginBottom:'0px'}}>Top Features</h3>
-                            <h4 className="white" style={{fontWeight:'300',marginTop:'10px',marginBottom:'10px'}}>Content Management</h4>
-                            <h4 className="white" style={{fontWeight:'300',marginTop:'10px',marginBottom:'10px'}}>Financial Mangement</h4>
-                            <h4 className="white" style={{fontWeight:'300',marginTop:'10px',marginBottom:'10px'}}>Inventory Management</h4>
-                            <h4 className="white" style={{fontWeight:'300',marginTop:'10px'}}>HR Management</h4>
+                            <h4 className="white" style={{fontWeight:'500',marginTop:'10px',marginBottom:'10px'}}>Content Management</h4>
+                            <h4 className="white" style={{fontWeight:'500',marginTop:'10px',marginBottom:'10px'}}>Financial Mangement</h4>
+                            <h4 className="white" style={{fontWeight:'500',marginTop:'10px',marginBottom:'10px'}}>Inventory Management</h4>
+                            <h4 className="white" style={{fontWeight:'500',marginTop:'10px'}}>HR Management</h4>
 
                           </Grid>
                           <Grid md={4} xs={12} style={{textAlign:'center'}}>
                           <h3 className="white" style={{marginBottom:'0px'}}>Follow Us</h3>
-                            <h4 className="white" style={{fontWeight:'300',marginTop:'10px',marginBottom:'10px'}}>Content Management</h4>
+                            <h4 className="white" style={{fontWeight:'500',marginTop:'10px',marginBottom:'10px'}}>Content Management</h4>
                            <a href="https://www.linkedin.com/company/naseem/" target="_blank"><i class="white fab fa-linkedin"></i></a>
                            <a href="https://web.facebook.com/naseemeducation?_rdc=1&_rdr" target="_blank"><i style={{marginLeft:'10px'}} className="white fab fa-facebook-f"></i></a> 
                             <div style={{marginTop:'10px'}}>        
-                                <img  width="50" src={logo}></img>
+                                <img style={{borderRadius:'5px'}}  width="50" src={logo}></img>
                             </div>
 
 
