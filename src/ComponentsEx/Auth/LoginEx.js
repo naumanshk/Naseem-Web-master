@@ -4,7 +4,7 @@ import '../../config';
 import* as firebase from 'firebase'
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import naseemlogo from '../../ImagesEx/naseemlogo.png'
-import loginImg from '../../ImagesEx/naseemloginpagelogo.png'
+import loginImg from '../../Images/executive@2x.png'
 import userEmailImg from '../../ImagesEx/useremail.png'
 import lock from '../../ImagesEx/lock.png'
 import { ClipLoader } from "react-spinners";
@@ -132,7 +132,9 @@ class loginExComponent extends Component {
 
                 <div className="center naseemlogo">
                     
-                    <img id="naseem-main" src={loginImg} alt="logo"></img>          
+                    <img id="naseem-main" src={loginImg} alt="logo"></img>   
+                    <h1 className="green bold" >Welcome to Naseem Education</h1>
+    
 
                 </div>
                 

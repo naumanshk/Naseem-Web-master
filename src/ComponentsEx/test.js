@@ -13,6 +13,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-ro
 import result from '../Images/test.png'
 import classBanner from '../ImagesEx/class-banner.png'
 import download from 'downloadjs'
+import dashboardBanner from '../ImagesEx/dashboard-ex.png'
+
 
 class test extends Component {
     constructor() {
@@ -122,15 +124,12 @@ class test extends Component {
         return (
 
             <div className="dashboard-ex regular" >
-                <div className="dashboard-header">
-                    <img src={classBanner} className="title-img"></img>
-
-                    <h1 className="white title ">{this.state.className}</h1>
-
-
-
+                 <div className="dashboard-header-ex">
+                    <img src={window.innerWidth >= 900 ? dashboardBanner : dashboardBanner} className="title-img-ex"></img>
+                    {/* <h1 className="white title">Welcome To Your Dashboard</h1> */}
 
                 </div>
+
 
                 <div className="container">
 

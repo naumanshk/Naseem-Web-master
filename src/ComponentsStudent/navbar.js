@@ -115,6 +115,16 @@ function ResponsiveDrawer(props) {
             </ListItem>
             </div>
           </Link>
+          <Link  to='/student/video'>
+          <div  >
+            <ListItem onClick={handleDrawerClose} button key="dashboard">
+                {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
+                { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
+                {/* <img src={dashboard} className="nav-icon"></img> */}
+                <h4>Join Room</h4>
+            </ListItem>
+            </div>
+          </Link>
 
           
 

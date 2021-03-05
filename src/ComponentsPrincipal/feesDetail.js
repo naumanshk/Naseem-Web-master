@@ -395,10 +395,10 @@ class feeDetails extends Component {
 
                     </div>
 
-                    <Dialog open={this.state.open} onClose={e => this.setState({ err: false, open: false, updateFee: false, addFee: false, selectedStudent: [], studentfee: '', discount: '', expense: '', selectedDate: '', reason: '' })} aria-labelledby="form-dialog-title">
+                    <Dialog  fullWidth="true" open={this.state.open} onClose={e => this.setState({ err: false, open: false, updateFee: false, addFee: false, selectedStudent: [], studentfee: '', discount: '', expense: '', selectedDate: '', reason: '' })} aria-labelledby="form-dialog-title">
                         <img src={book} style={{ alignSelf: 'center', marginTop: '20px', backgroundColor: 'unset' }} className="icon" ></img>
                         <DialogTitle className="center purple" id="form-dialog-title">Student Fee Vouchere</DialogTitle>
-                        <DialogContent style={{ width: '600px' }}>
+                        <DialogContent  >
 
                             <div class='width-80 margin-auto margin-bottom-10'>
                                 {this.state.err && <h3 className="red">Please Fill all the fileds!</h3>}

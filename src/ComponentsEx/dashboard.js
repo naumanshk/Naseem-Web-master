@@ -13,7 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import fire from '../config';
 import principalImg from '../ImagesEx/principal.png'
 import schoolImg from '../ImagesEx/school.png'
-import dashboardBanner from '../ImagesEx/dashboard-banner.png'
+import dashboardBanner from '../ImagesEx/dashboard-ex.png'
 import schoolDetails from '../ComponentsEx/schoolDetails'
 
 
@@ -385,9 +385,9 @@ class dashboardComponent extends Component {
         return (
             <div className="dashboard-ex" >
 
-                <div className="dashboard-header">
-                    <img src={window.innerWidth >= 900 ? dashboardBanner : dashboardBanner} className="title-img"></img>
-                    <h1 className="white title">Welcome To Your Dashboard</h1>
+                <div className="dashboard-header-ex">
+                    <img src={window.innerWidth >= 900 ? dashboardBanner : dashboardBanner} className="title-img-ex"></img>
+                    {/* <h1 className="white title">Welcome To Your Dashboard</h1> */}
 
                 </div>
 

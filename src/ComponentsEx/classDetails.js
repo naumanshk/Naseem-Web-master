@@ -13,6 +13,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import * as moment from 'moment';
 import Calendar from 'react-calendar';
 import MonthYearPicker from 'react-month-year-picker';
+import dashboardBanner from '../ImagesEx/dashboard-ex.png'
 
 import './AppEx.css';
 import { Button } from '@material-ui/core';
@@ -309,15 +310,12 @@ class classDetails extends Component {
     render() {
         return (
             <div className="dashboard-ex regular" >
-                <div className="dashboard-header">
-                    <img src={classBanner} className="title-img"></img>
-
-                    <h1 className="white title ">{this.state.className}</h1>
-
-
-
+                     <div className="dashboard-header-ex">
+                    <img src={window.innerWidth >= 900 ? dashboardBanner : dashboardBanner} className="title-img-ex"></img>
+                    {/* <h1 className="white title">Welcome To Your Dashboard</h1> */}
 
                 </div>
+
 
                 <div className="students-container" >
                     <h2 className="green">Student Attendance</h2>

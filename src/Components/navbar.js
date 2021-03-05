@@ -67,6 +67,8 @@ function ResponsiveDrawer(props) {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [subMenu, setsubMenu] = React.useState(false);
+  const [subMenuRoom, setsubMenuRoom] = React.useState(false);
+
   const [dropdown, updateDropdown] = React.useState([]);
   const [classID, setClassID] = React.useState();
   const [schoolKey, setSchoolKey] = React.useState(false);
@@ -137,6 +139,7 @@ function ResponsiveDrawer(props) {
       <Link onClick={() => {
         handleDrawerClose
         setsubMenu(false)
+        setsubMenuRoom(false)
       }} to='/teacher'>
         <img className="navbar-logo" src={logo} alt="logo"></img>
       </Link>
@@ -148,6 +151,8 @@ function ResponsiveDrawer(props) {
             <ListItem onClick={() => {
               handleDrawerClose
               setsubMenu(false)
+              setsubMenuRoom(false)
+
             }} button key="Add Items">
               {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
                 { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
@@ -162,6 +167,8 @@ function ResponsiveDrawer(props) {
             <ListItem onClick={() => {
               handleDrawerClose
               setsubMenu(false)
+              setsubMenuRoom(false)
+
             }} button key="Add Items">
               {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
                 { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
@@ -176,6 +183,8 @@ function ResponsiveDrawer(props) {
             <ListItem onClick={() => {
               handleDrawerClose
               setsubMenu(false)
+              setsubMenuRoom(false)
+
             }} button key="Add Items">
               {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
                 { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
@@ -220,6 +229,41 @@ function ResponsiveDrawer(props) {
           </div>
         </Link>
 
+
+        <Link  >
+          <div  >
+            <ListItem onClick={e => setsubMenuRoom(!subMenuRoom)} button key="Add Items">
+              {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
+                { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
+              <img src={test} className="nav-icon"></img>
+              <h4>Create Room</h4>
+            </ListItem>
+            {subMenuRoom && <div class="dropdown-responsive" style={{ paddingLeft: '20px' }}>
+
+              {dropdown.map((items) =>
+                <Link to='/teacher/video'>
+                  <div >
+                    <ListItem onClick={() => {
+                      handleDrawerClose
+                      localStorage.setItem("classId", items.id)
+                      setClassID(items.id)
+
+                    }} button key="Add Items">
+                      {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
+                { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
+                      <img src={classImg1} className="nav-icon"></img>
+                      <h4 class={localStorage.getItem("classId") == items.id ? "text-green" : "normal"} >{items.className}</h4>
+
+                    </ListItem>
+                  </div>
+                </Link>
+              )}
+
+
+
+            </div>}
+          </div>
+        </Link>
 
 
       </List>

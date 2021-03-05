@@ -36,6 +36,10 @@ html {
 border-radius: 0px 13px 13px 0px !important;
 }
 
+.width-70{
+  width:70%
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .text-sm-center{
     text-align: center;
@@ -514,6 +518,27 @@ a:hover {
   width: 100%;
   max-height: 600px;
   
+  
+}
+
+.box-container-video {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #bebebe;
+  min-height: 200px;
+
+  max-height: 600px;
+  
+  
+}
+
+.rooms-item-t {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 15px;
+  background-color: #F5F5F5;
+  margin: 15px;
+  box-shadow: 0px 2px 5px #bebebe;
   
 }
 
@@ -1331,6 +1356,23 @@ a:hover {
   overflow-y:scroll;
 }
 
+.products-card {
+  width: 300px;
+  height: 310px;
+  text-align: center;
+ 
+  color: #14A73F;
+  margin: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 0px 18px 18px 18px;
+  font-size: 20px;
+  background: #F5F5F5 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 42px;
+  opacity: 1;
+}
+
 /* /////////////////////////////////////////////////////////  MEDIA QUERIES  ///////////////////////////////////////////////////////////// */
 
 
@@ -1664,6 +1706,7 @@ a:hover {
   .OurPlatform{
     justify-content: center;
   }
+
 }
 
 @media only screen and (max-width : 320px) {
@@ -1685,6 +1728,7 @@ a:hover {
   .OurPlatform{
     padding:70px
   }
+ 
 }
 
 .custom-cal-t >.react-datetime-picker__wrapper{

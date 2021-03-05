@@ -12,6 +12,8 @@ import test from './test'
 import checkTest from './checkTest'
 import resultTest from './studentResults'
 import profile from './profile'
+import Video from './VideoChat/VideoMeeting.js'
+
 
 class teacherHomeComponent extends Component {
     constructor(){
@@ -46,6 +48,8 @@ class teacherHomeComponent extends Component {
                         <Route exact path="/teacher/test/check" component={checkTest}  /> 
                         <Route exact path="/teacher/test/result" component={resultTest}  /> 
                         <Route exact path="/teacher/profile" component={profile}  /> 
+                        <Route exact path="/teacher/video" component={Video}  /> 
+
 
                         {/* <Route exact path="/home/:id" component={schoolDetails} key={this.props.match.params.id}  />  */}
                         {/* <Route exact path="/home/:id" render={(props) => (

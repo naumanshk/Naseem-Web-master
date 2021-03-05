@@ -37,6 +37,8 @@ import ic_inventory_blackboard from '../ImagesEx/white-board.png'
 import MonthYearPicker from 'react-month-year-picker';
 import calender from '../ImagesEx/calendar.png'
 import Calendar from 'react-calendar';
+import dashboardBanner from '../ImagesEx/dashboard-ex.png'
+
 
 class schoolDetails extends Component {
     constructor(props) {
@@ -647,15 +649,13 @@ class schoolDetails extends Component {
 
         return (
             <div className="dashboard-ex">
-                <div className="dashboard-header">
-                    <img src={schoolBanner} className="title-img"></img>
-
-                    <h1 className="white title ">{this.state.schoolName}</h1>
-
-
-
+             
+             <div className="dashboard-header-ex">
+                    <img src={window.innerWidth >= 900 ? dashboardBanner : dashboardBanner} className="title-img-ex"></img>
+                    {/* <h1 className="white title">Welcome To Your Dashboard</h1> */}
 
                 </div>
+
 
                 <div className="school-box-container">
                     <div className="finances-card">

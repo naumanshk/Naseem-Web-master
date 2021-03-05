@@ -16,7 +16,7 @@ import path from '../ImagePrinci/Path 2.png'
 import path1 from '../ImagePrinci/Group 66.png'
 import Drawer from '@material-ui/core/Drawer';
 import MenuIcon from '@material-ui/icons/Menu';
-import principalHeader from '../ImagePrinci/coverP.png'
+import principalHeader from '../ImagePrinci/bannr2.png'
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Input from '@material-ui/core/Input';
@@ -109,13 +109,13 @@ class profile extends Component {
 
     render() {
         return (
-            <div className="dashboard-principal">
+            <div className="dashboard-principal" style={{marginRight:'0px'}}>
 
                 <div className="container">
                     <div class='relative ' style={{ marginRight: '10px' }}>
 
                         {/* <h1 className="center header-main-p">Welcome To Your Dashboard</h1> */}
-                        <img src={principalHeader} className="header-img-p "></img>
+                        <img style={{maxHeight:'500px'}} src={principalHeader} className="header-img-p"></img>
                         {/* <div style={{ height: '98%', width: '100%' }} class='gradiant-p absolute no-margin'></div> */}
                     </div>
 

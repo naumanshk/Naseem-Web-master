@@ -9,6 +9,8 @@ import dashboardComponent from './dashboardStudent'
 import solveTest from './studentTest'
 import studentResult from './studentResults'
 import profile from './profile'
+import Video from './VideoChat/VideoMeeting.js'
+
 
 
 class studentHomeComponent extends Component {
@@ -40,7 +42,9 @@ class studentHomeComponent extends Component {
                         <Route exact path="/student" component={dashboardComponent}  />  
                         <Route exact path="/student/test" component={solveTest}  />  
                         <Route exact path="/student/result" component={studentResult}  />  
-                        <Route exact path="/student/profile" component={profile}  />  
+                        <Route exact path="/student/profile" component={profile}  /> 
+                        <Route exact path="/student/video" component={Video}  />  
+
 
 
 

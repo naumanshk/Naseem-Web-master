@@ -9,6 +9,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
 import testImg from '../Images/test.png'
 import fire from '../config';
+import dashboardBanner from '../ImagesEx/dashboard-ex.png'
 
 
 
@@ -86,13 +87,9 @@ class testDetails extends Component {
 
         return (
             <div className="dashboard-ex regular" >
-                <div className="dashboard-header">
-                    <img src={classBanner} className="title-img"></img>
-
-                    <h1 className="white title ">{this.state.className}</h1>
-
-
-
+                   <div className="dashboard-header-ex">
+                    <img src={window.innerWidth >= 900 ? dashboardBanner : dashboardBanner} className="title-img-ex"></img>
+                    {/* <h1 className="white title">Welcome To Your Dashboard</h1> */}
 
                 </div>
 
