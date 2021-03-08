@@ -98,7 +98,7 @@ const Lobby = ({
     
             <div class=' margin-auto margin-bottom-10 center'>
     
-              <VideoCallIcon style={{cursor:'pointer'}} onClick={e=>join(localStorage.getItem('Student'),item.roomName,item.subject,item.username)} className="green" />
+              <VideoCallIcon style={{cursor:'pointer'}} onClick={e=>join(localStorage.getItem('Student'),item.roomName,item.subject,item.username)} className="student-grey" />
     
             </div>
     

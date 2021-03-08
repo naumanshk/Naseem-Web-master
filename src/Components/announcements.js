@@ -103,7 +103,7 @@ class Announcements extends Component {
         return (
             <div className="announcements">
                 <div className="announcement-header">
-                    <h1 className="center white regular">Notificaions</h1>
+                    <h1 className="center white regular">Notifications</h1>
 
                 </div>
 

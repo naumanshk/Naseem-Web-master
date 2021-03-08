@@ -101,7 +101,7 @@ class loginComponent extends Component {
 
                 <div className="center naseemlogo">
                     <h1 className="grey regular login-title" style={{paddingTop: '100px'}}>Welcome To Naseem Teacher</h1>
-                    <img id="naseem-main" src={loginImg} alt="logo"></img>          
+                    <img style={{marginTop:'10vh'}} id="naseem-main" src={loginImg} alt="logo"></img>          
 
                 </div>
 

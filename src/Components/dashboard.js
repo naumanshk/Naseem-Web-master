@@ -5,7 +5,7 @@ import * as firebase from 'firebase'
 import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
 import classImg1 from '../Images/classImg1.png'
 import Announcements from './announcements'
-import teacherHeader from '../Images/teacher-header.png'
+import teacherHeader from '../Images/teacher-dashboards.png'
 import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
@@ -459,8 +459,8 @@ class dashboardComponent extends Component {
                 <div className="menu-icon-right" onClick={() => { this.setState({ drawer: true }) }}><MenuIcon /></div>
                 <div className="container">
                     <div>
-                        <h1 className="center header-main">Welcome To Your Dashboard</h1>
-                        <img src={teacherHeader} className="header-img"></img>
+                    
+                        <img src={teacherHeader} className="header-img border-rad-img"></img>
 
                     </div>
 

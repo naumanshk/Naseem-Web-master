@@ -16,17 +16,17 @@ import path from '../ImagePrinci/Path 2.png'
 import path1 from '../ImagePrinci/Group 66.png'
 import Drawer from '@material-ui/core/Drawer';
 import MenuIcon from '@material-ui/icons/Menu';
-import Header from '../Images/green.png'
+import Header from '../Images/teacher-profile.png'
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
-import profile_user from '../Images/user.png'
-import email from '../Images/msg.png'
-import gender from '../Images/gender.png'
-import degree from '../Images/qualification.png'
-import location from '../Images/location.png'
+import profile_user from '../Images/profile-user.png'
+import email from '../Images/email.png'
+import gender from '../Images/gender1.png'
+import degree from '../Images/policy.png'
+import location from '../Images/maps.png'
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import EditIcon from '@material-ui/icons/Edit';
@@ -110,13 +110,13 @@ class profile extends Component {
 
     render() {
         return (
-            <div className="dashboard-principal">
+            <div style={{marginRight:'0px'}} className="dashboard-principal">
 
                 <div className="container">
                     <div class='relative ' style={{ marginRight: '10px' }}>
 
-                        <h1 className="center header-main-p">Welcome To Your Dashboard</h1>
-                        <img src={Header} className="header-img-p "></img>
+                      
+                        <img src={Header} className="header-img border-rad-img"></img>
 
                     </div>
 
@@ -127,13 +127,13 @@ class profile extends Component {
                         <div className="section-container-p width-40 width-100" >
 
                            
-                            <h2 style={{color:"#18502F"}} class='center  relative' >Profile
+                            <h2  class='center green relative' >Profile
                                 
                                 </h2>
                                 <div style={{justifyContent:'flex-end'}} className='flex'>
                                {!this.state.editable ?
                                 <Button
-                                style={{justifyContent:'flex-end',border:'1px solid rgb(24, 80, 47)', color:'rgb(24, 80, 47)'}}
+                                style={{justifyContent:'flex-end',border:'1px solid #4CBB17', color:'#4CBB17'}}
                                     variant="outlined" size="medium" color="primary"
                                     startIcon={<EditIcon />}
                                     onClick={e=>this.setState({editable:true})}
@@ -307,7 +307,7 @@ class profile extends Component {
                                 <div class='width-80 margin-auto margin-bottom-10'>
                                     {/* {this.state.err && <h3 className="red">Please Fill all the fileds!</h3>} */}
 
-                                   {this.state.editable && <button onClick={e=>this.editProfile()} style={{ cursor:'pointer', background: '#18502F', border: 'none', borderRadius: '12px', color: 'white', width: '30%', padding: '20px', font: "14px", fontWeight: 'bold' }} className='flex justify-center center'>Save</button>}
+                                   {this.state.editable && <button onClick={e=>this.editProfile()} style={{ cursor:'pointer', background: '#4CBB17', border: 'none', borderRadius: '12px', color: 'white', width: '30%', padding: '20px', font: "14px", fontWeight: 'bold' }} className='flex justify-center center'>Save</button>}
 
                                 </div>
 

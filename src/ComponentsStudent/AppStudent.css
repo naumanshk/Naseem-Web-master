@@ -16,6 +16,20 @@
 .yellow{
   color:rgb(255, 187, 0)
 }
+
+.dashboard-header-student {
+  width: 99%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 0px;
+  margin-bottom: 5px;
+  text-align: center;
+  box-shadow: 0px 3px 7px #bebebe;
+}
+
+
 .login-input-s {
     margin: auto;
     padding: 20px 25px;
@@ -179,4 +193,36 @@
       max-height: 60px;
       margin-top: 60px;
     }
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .dashboard-header-student {
+      width: 95%;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 0px;
+      margin-bottom: 5px;
+      text-align: center;
+      box-shadow: 0px 3px 7px #bebebe;
+  }
+  
+  }
+
+  @media only screen and (max-width: 1024px) {
+
+    .dashboard-header-student {
+      width: 95%;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 0px;
+      margin-bottom: 5px;
+      text-align: center;
+      box-shadow: 0px 3px 7px #bebebe;
+  }
+  
   }

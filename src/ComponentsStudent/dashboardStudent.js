@@ -18,7 +18,7 @@ import fire from '../config';
 import announcementImg from '../Images/announcement.png'
 import Drawer from '@material-ui/core/Drawer';
 import MenuIcon from '@material-ui/icons/Menu';
-import studentDash from '../ImagesStudent/student-dash.png'
+import studentDash from '../ImagesStudent/student-dashboard.png'
 import Progress from 'react-progressbar';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -451,12 +451,19 @@ class dashboardComponent extends Component {
             <div className="dashboard">
                 <div className="menu-icon-right" onClick={() => { this.setState({ drawer: true }) }}><MenuIcon /></div>
                 <div className="container">
-                    <div className="student-header">
-                        <div><h1 className="header-text-s">Welcome To Your Dashboard</h1></div>
+                    {/* <div className="student-header">
+                     
                         <div><img src={studentDash} className="header-img-s header-img-md"></img></div>
 
 
+                    </div> */}
+                           <div>
+                  
+                        <img src={studentDash} className="dashboard-header-student"></img>
+
                     </div>
+
+
                     <div className="mid-grid">
                         <div className="box-container">
                             <div className="container-header-s">

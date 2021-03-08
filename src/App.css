@@ -20,6 +20,10 @@ html {
   font-size: 20px;
 }
 
+.border-rad-img{
+border-radius: 25px;
+}
+
 .light{
   color:red;
   font-weight:bold;
@@ -492,7 +496,7 @@ a:hover {
   max-width: 100%;
   min-width: 100%;
   padding-right: 10px;
-  max-height: 250px;
+  max-height: 400px;
 }
 
 .header-main {

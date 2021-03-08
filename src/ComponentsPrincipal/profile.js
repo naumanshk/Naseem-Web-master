@@ -16,7 +16,7 @@ import path from '../ImagePrinci/Path 2.png'
 import path1 from '../ImagePrinci/Group 66.png'
 import Drawer from '@material-ui/core/Drawer';
 import MenuIcon from '@material-ui/icons/Menu';
-import principalHeader from '../ImagePrinci/bannr2.png'
+import principalHeader from '../ImagePrinci/header-profile.png'
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Input from '@material-ui/core/Input';
