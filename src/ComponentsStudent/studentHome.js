@@ -10,6 +10,13 @@ import solveTest from './studentTest'
 import studentResult from './studentResults'
 import profile from './profile'
 import Video from './VideoChat/VideoMeeting.js'
+import Suggestions from './suggestions.js'
+import ZoomVideo from './zoom/Lobby.js'
+import chatScreen from './chatting/WelcomeScreen.js'
+import Chat from './chatting/ChatScreen.js'
+
+
+
 
 
 
@@ -44,6 +51,16 @@ class studentHomeComponent extends Component {
                         <Route exact path="/student/result" component={studentResult}  />  
                         <Route exact path="/student/profile" component={profile}  /> 
                         <Route exact path="/student/video" component={Video}  />  
+                        <Route exact path="/student/suggestions" component={Suggestions}  />  
+                        <Route exact path="/student/zoom" component={ZoomVideo}  />  
+                        <Route exact path="/student/chatScreen" component={chatScreen}  />  
+                        <Route exact path="/student/chat" component={Chat}  />  
+
+
+            
+
+
+
 
 
 

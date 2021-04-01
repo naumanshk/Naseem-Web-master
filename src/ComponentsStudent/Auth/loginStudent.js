@@ -46,6 +46,8 @@ class loginStudentComponent extends Component {
                             localStorage.setItem("Student",  student.val().userName)
                             localStorage.setItem("studentId", student.val().id)
                             localStorage.setItem("classId", section.key )
+                            localStorage.setItem("email", this.state.email)
+
                             this.setState({loading: false})
                         }
                     })

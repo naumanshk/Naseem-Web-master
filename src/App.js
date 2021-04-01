@@ -23,6 +23,7 @@ import aboutComponent from './Components/about'
 import terms from './Components/terms'
 import fire from './config';
 
+
 function App() {
 
   useEffect(() => {
@@ -60,6 +61,8 @@ function App() {
 
           <Route path="/about" component={aboutComponent}  />
           <Route path="/terms&conditions" component={terms}  />
+
+    
           
         </Switch>
       </Router> 

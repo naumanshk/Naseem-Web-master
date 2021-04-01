@@ -124,7 +124,7 @@ class loginExComponent extends Component {
                             />
 
                         </div>
-                        <button className="login-btn" onClick={()=> {this.verify()}} >LOGIN</button>
+                        <button className="login-btn-ex" onClick={()=> {this.verify()}} >LOGIN</button>
                     </div>
                     
 

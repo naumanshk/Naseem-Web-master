@@ -59,6 +59,8 @@ class loginComponent extends Component {
                         this.setState({userExists:true});
                         localStorage.setItem("Teacher",  user.userName)
                         localStorage.setItem("teacherId", user.id)
+                        localStorage.setItem("email",this.state.email)
+
                         this.setState({loading: false})
                     }
                 })
@@ -147,7 +149,7 @@ class loginComponent extends Component {
                         <p style={{paddingTop: '20px'}} >Register Now</p>
                         </Link>
                         
-                        <button className="login-btn" onClick={()=> {this.verify()}} >LOGIN</button>
+                        <button className="login-btn-t" onClick={()=> {this.verify()}} >LOGIN</button>
                     </div>
                     
 

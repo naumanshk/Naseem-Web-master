@@ -381,7 +381,7 @@ a:hover {
   opacity: 1; /* Firefox */
 }
 
-.login-btn {
+.login-btn-t {
   border: none;
   font-size: large;
   color: white;
@@ -1758,4 +1758,18 @@ a:hover {
 
 .member-img:hover {
   max-width: 210px;
+}
+
+#zmmtg-root {
+  display: none;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

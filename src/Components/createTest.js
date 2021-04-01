@@ -52,7 +52,8 @@ class createTest extends Component {
             uploaded: '',
             students: [],
             testeCreated: false,
-            testStartTime: new Date()
+            testStartTime: new Date(),
+            questionType: ''
         }
 
     }
@@ -101,7 +102,10 @@ class createTest extends Component {
 
             ],
             awnserId: null,
-            studentSelectedAwnserId: 0
+            studentSelectedAwnserId: 0,
+            questionType: this.state.questionType,
+            classLevel: localStorage.getItem("class"),
+
 
         })
         this.setState({ mcqs })
@@ -329,7 +333,7 @@ class createTest extends Component {
                 testSolvedStatus: false,
                 testTeacherChecked: false,
                 testTeacherChecked: false,
-
+                classLevel: localStorage.getItem("class"),
                 testTime: this.state.testStartTime.toLocaleTimeString(),
                 title: this.state.title,
                 totalMarks: this.state.totalMarks
@@ -357,7 +361,9 @@ class createTest extends Component {
                     testTeacherChecked: false,
                     testTime: this.state.testStartTime.toLocaleTimeString(),
                     title: this.state.title,
+                    classLevel: localStorage.getItem("class"),
                     totalMarks: this.state.totalMarks
+
                 }).then(console.log('eje'));
 
             })
@@ -412,6 +418,10 @@ class createTest extends Component {
                                 }} >
                                     <option selected="selected" value="English">English</option>
                                     <option value="Urdu">Urdu</option>
+                                    <option value="Maths">Maths</option>
+                                    <option value="Physics">Physics</option>
+
+
 
                                 </select>
                             </div>
@@ -543,6 +553,7 @@ class createTest extends Component {
                                             mcq.question = e.target.value;
                                             this.setState({ contentMCQs: contentMCQs })
                                         }} />
+
                                         <button className="add-new-option" onClick={() => {
                                             mcq.options.push({
                                                 option: '',
@@ -656,6 +667,58 @@ class createTest extends Component {
                                             this.setState({ mcqs: MCQS })
                                         }} />
 
+
+                                        {
+                                            this.state.subject == 'English' &&
+                                            <select
+                                                onChange={e => {
+
+
+
+                                                    e.preventDefault()
+                                                    mcq.questionType = e.target.value;
+                                                    this.setState({ mcqs: MCQS })
+
+
+                                                }
+                                                }
+                                                style={{ height: '50%', alignSelf: 'center', marginLeft: '40px' }}>
+                                                <option>Type</option>
+                                                <option value={'Grammer'}>Grammer</option>
+                                                <option value={'Punctuation'}>Punctuation</option>
+                                                <option value={'Adjectivies'}>Adjectives</option>
+                                                <option value={'Nouns'}>Nouns</option>
+
+                                                <option value={'Adverbs'}>Adverbs</option>
+                                                <option value={'Verbs'}>Verbs</option>
+                                                
+
+
+                                            </select>
+                                        }
+
+                                        {
+                                            this.state.subject == 'Maths' &&
+                                            <select
+                                                onChange={e => {
+
+
+
+                                                    e.preventDefault()
+                                                    mcq.questionType = e.target.value;
+                                                    this.setState({ mcqs: MCQS })
+
+
+                                                }
+                                                }
+                                                style={{ height: '50%', alignSelf: 'center', marginLeft: '40px' }}>
+                                                <option>Type</option>
+                                                <option value={'multiplication'}>Multiplication</option>
+                                                <option value={'addition'}>Addition</option>
+
+                                            </select>
+                                        }
+
                                     </div>
 
                                     <img src={deleteImg} className="delete" onClick={() => { this.deleteMCQ(index) }}></img>
@@ -668,6 +731,7 @@ class createTest extends Component {
                                         mcq.question = e.target.value;
                                         this.setState({ mcqs: MCQS })
                                     }} />
+
                                     <button className="add-new-option" onClick={() => {
                                         mcq.options.push({
                                             option: '',
@@ -724,43 +788,45 @@ class createTest extends Component {
 
                 </div>}
 
-                {shorts.length > 0 && <div className="section-container">
-                    <h3 className="green center">Short Questions</h3>
-                    {shorts.map((short, index) => {
-                        return (
-                            <div className="question">
-                                <div className="flex">
-                                    <h4>Question No: {index + 1} </h4>
+                {
+                    shorts.length > 0 && <div className="section-container">
+                        <h3 className="green center">Short Questions</h3>
+                        {shorts.map((short, index) => {
+                            return (
+                                <div className="question">
                                     <div className="flex">
-                                        <h4 className="regular green">Marks: </h4>
-                                        <input value={short.marks} className="input-marks" placeholder="Enter marks" type="number" onChange={(e) => {
-                                            e.preventDefault();
-                                            short.marks = parseInt(e.target.value, 10);
-                                            this.setState({ shortQuestions: shorts })
-                                        }} />
+                                        <h4>Question No: {index + 1} </h4>
+                                        <div className="flex">
+                                            <h4 className="regular green">Marks: </h4>
+                                            <input value={short.marks} className="input-marks" placeholder="Enter marks" type="number" onChange={(e) => {
+                                                e.preventDefault();
+                                                short.marks = parseInt(e.target.value, 10);
+                                                this.setState({ shortQuestions: shorts })
+                                            }} />
+
+                                        </div>
+                                        <img src={deleteImg} className="delete" onClick={() => { this.deleteShort(index) }}></img>
 
                                     </div>
-                                    <img src={deleteImg} className="delete" onClick={() => { this.deleteShort(index) }}></img>
+                                    <input value={short.question} placeholder="Enter Question here" className="question-input" onChange={(e) => {
+                                        e.preventDefault()
+                                        short.question = e.target.value;
+                                        this.setState({ shortQuestions: shorts })
+                                    }} />
+
 
                                 </div>
-                                <input value={short.question} placeholder="Enter Question here" className="question-input" onChange={(e) => {
-                                    e.preventDefault()
-                                    short.question = e.target.value;
-                                    this.setState({ shortQuestions: shorts })
-                                }} />
+                            )
+                        })
 
+                        }
 
-                            </div>
-                        )
-                    })
-
-                    }
-
-                </div>}
+                    </div>
+                }
 
 
 
-            </div>
+            </div >
         )
     }
 

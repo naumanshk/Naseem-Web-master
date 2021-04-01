@@ -1,7 +1,5 @@
-import firebase from 'firebase';
-import 'firebase/storage';
-
-
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
 
 var firebaseConfig = {
   apiKey: "AIzaSyB8baZtQy2TUafBPPXlCbYrfvW06H5X5wo",
@@ -13,10 +11,11 @@ var firebaseConfig = {
   appId: "1:224160441920:web:f9c64e2d30539d1fef61a5"
   };
 
-  const fire = firebase.initializeApp(firebaseConfig);
-  const storage = firebase.storage();
-  // const messaging = firebase.messaging();
-  export {fire, storage as default} ;
+
+ firebase.initializeApp(firebaseConfig);
+  const messaging = firebase.messaging();
+
+
 
   // test database
   // apiKey: "AIzaSyDq5BcIeFIasg8OGErxYKBD3K1SyKGQC2k",

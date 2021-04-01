@@ -126,6 +126,16 @@ function ResponsiveDrawer(props) {
             </div>
           </Link>
 
+          <Link  to='/student/chatScreen'>
+          <div  >
+            <ListItem onClick={handleDrawerClose} button key="dashboard">
+                {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
+                { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
+                {/* <img src={dashboard} className="nav-icon"></img> */}
+                <h4>Chat</h4>
+            </ListItem>
+            </div>
+          </Link>
           
 
 

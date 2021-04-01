@@ -173,6 +173,17 @@ class checkTest extends Component {
                     result.multiChoiceTotalCorrect = result.multiChoiceTotalCorrect + 1;
                 } else {
                     result.multiChoiceTotalWrong = result.multiChoiceTotalWrong + 1;
+                    var childKey = firebase.database().ref("progressive_suggestions").push().getKey();
+                    console.log(mcq.questionType)
+                    firebase.database().ref("progressive_suggestions").child(localStorage.getItem("classId")).child(Test.studentId).child(Test.subjectName).child(childKey).set({
+
+                        questionType:mcq.questionType,
+                        subject: Test.subjectName,
+                        studentId:Test.studentId,
+                        classLevel:Test.classLevel
+
+
+                    }).then(console.log('done'));
                 }
             })
 

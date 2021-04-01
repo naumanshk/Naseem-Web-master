@@ -15,6 +15,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "@zoomus/websdk": "^1.9.1",
     "axios": "^0.20.0",
     "chart.js": "^2.9.3",
     "chartjs": "^0.3.24",
@@ -39,6 +40,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
     "react-spinners": "^0.8.0",
+    "twilio-chat": "^4.1.0",
     "twilio-video": "^2.13.0"
   },
   "scripts": {

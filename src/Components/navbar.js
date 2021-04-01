@@ -100,6 +100,12 @@ function ResponsiveDrawer(props) {
 
 
   }
+  const reload = (props) => {
+
+    window.location.reload()
+
+
+  }
   const getClasses = () => {
 
     let classes = []
@@ -210,6 +216,8 @@ function ResponsiveDrawer(props) {
                     <ListItem onClick={() => {
                       handleDrawerClose
                       localStorage.setItem("classId", items.id)
+                      localStorage.setItem("class", items.className)
+
                       setClassID(items.id)
 
                     }} button key="Add Items">
@@ -246,6 +254,9 @@ function ResponsiveDrawer(props) {
                     <ListItem onClick={() => {
                       handleDrawerClose
                       localStorage.setItem("classId", items.id)
+                      localStorage.setItem("class", items.className)
+                      reload()
+
                       setClassID(items.id)
 
                     }} button key="Add Items">
@@ -257,11 +268,30 @@ function ResponsiveDrawer(props) {
                     </ListItem>
                   </div>
                 </Link>
+
+
               )}
 
 
 
             </div>}
+          </div>
+        </Link>
+
+
+        <Link to='/teacher/chatScreen'>
+          <div  >
+            <ListItem onClick={() => {
+              handleDrawerClose
+              // setsubMenu(false)
+              // setsubMenuRoom(false)
+
+            }} button key="Add Items">
+              {/* { addImg && <img className="logoiconsm" src={addgreen} alt="logo"></img>}
+                { !addImg && <img className="logoiconsm" src={add} alt="logo"></img>} */}
+              <img src={announcement} className="nav-icon"></img>
+              <h4>Chat</h4>
+            </ListItem>
           </div>
         </Link>
 

@@ -271,7 +271,7 @@ class signupComponent extends Component {
                                 
                                 
                                 
-                                <button className="login-btn" onClick={()=> {this.register()}} >REGISTER</button>
+                                <button className="login-btn-t" onClick={()=> {this.register()}} >REGISTER</button>
 
                                 <p style={{paddingTop: '20px'}} >Already Have An Account? <Link to='/teacherlogin'>Login</Link></p>
                             </div>

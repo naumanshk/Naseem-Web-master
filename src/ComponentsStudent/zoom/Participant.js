@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { LocalAudioTrack } from "twilio-video";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophone, faMicrophoneSlash, faVideo, faVideoSlash ,faPhoneSlash, faDesktop} from '@fortawesome/free-solid-svg-icons'; 
+import { faMicrophone, faMicrophoneSlash, faVideo, faVideoSlash,faPhoneSlash } from '@fortawesome/free-solid-svg-icons'; 
 import CallEndIcon from '@material-ui/icons/CallEnd';
 
-const Participant = ({ participant ,track,setTrack,handleVideo,handlemic,handleVideoToggle,handleAudioToggle,handleScreen,logout}) => {
+
+const Participant = ({ participant ,track,setTrack,handleVideo,handlemic,handleVideoToggle,handleAudioToggle, logout}) => {
   const [videoTracks, setVideoTracks] = useState([]);
   const [audioTracks, setAudioTracks] = useState([]);
   const [trackoff, settrack] = useState(track);
@@ -80,13 +81,10 @@ const Participant = ({ participant ,track,setTrack,handleVideo,handlemic,handleV
       <h3>{participant.identity}</h3>
       <video   ref={videoRef} autoPlay={true}  />
 
-      <div style={{position:'absolute', right:'48npom run buidl%', bottom:'7%'}}>
-      <FontAwesomeIcon style={{marginRight:'10px',marginTop:'10px'}} color='white' onClick={handleVideo} icon={handleVideoToggle ? faVideoSlash : faVideo}  />
-      <FontAwesomeIcon color='white' onClick={handlemic} style={{marginRight:'10px'}} icon={handleAudioToggle ? faMicrophoneSlash :faMicrophone}  />
-      <FontAwesomeIcon style={{color:'white',cursor:'pointer',marginRight:'10px'}}  onClick={handleScreen} color='white'  icon={faDesktop}  />
-
+      <div style={{position:'absolute', right:'50%', bottom:'7%'}}>
+      <FontAwesomeIcon style={{marginRight:'10px',marginTop:'10px', cursor:'pointer'}} color='white' onClick={handleVideo} icon={handleVideoToggle ? faVideoSlash : faVideo}  />
+      <FontAwesomeIcon style={{marginRight:'10px',cursor:'pointer'}}  color='white' onClick={handlemic} icon={handleAudioToggle ? faMicrophoneSlash :faMicrophone}  />
       <FontAwesomeIcon style={{color:'red',cursor:'pointer'}}  onClick={logout} color='white'  icon={faPhoneSlash}  />
-
 
       </div>
 

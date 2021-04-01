@@ -159,6 +159,8 @@ class dashboardComponent extends Component {
                 this.setState({ classId: classes[0].id })
 
                 localStorage.setItem("classId", classes[0].id)
+                localStorage.setItem("class", classes[0].className)
+
             }
         })
     }
@@ -475,6 +477,8 @@ class dashboardComponent extends Component {
                                         this.getClassDetails(Class.id)
                                         this.setState({ classId: Class.id })
                                         localStorage.setItem("classId", Class.id)
+                                        localStorage.setItem("class", Class.className)
+
 
 
                                     }

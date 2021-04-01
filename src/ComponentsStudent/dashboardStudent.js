@@ -81,8 +81,9 @@ class dashboardComponent extends Component {
                 school.forEach(section => {
 
                     if (section.key == localStorage.getItem("classId")) {
-
-                        this.setState({ schoolId: school.key })
+                        localStorage.setItem("class", section.val().className)
+                        console.log(section.val())
+                        
                         console.log(school.key)
 
                     }
