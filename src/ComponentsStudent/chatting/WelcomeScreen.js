@@ -175,11 +175,11 @@ getAssociatedTeachers(){
 
      
      
-                <Link to={{ pathname: '/teacher/chat', state: { room: item.roomId, email: localStorage.getItem('email') } }} >
-                <Badge variant='dot' color="error">
+                {/* <Link to={{ pathname: '/student/chat', state: { room: item.roomId, email: localStorage.getItem('email') } }} > */}
+                <Badge  style={{cursor:'pointer'}} onClick={e=>this.login(item.id,item.userName)} variant='dot' color="error">
                 <MailIcon />
               </Badge>
-              </Link>
+              {/* </Link> */}
 
          
         

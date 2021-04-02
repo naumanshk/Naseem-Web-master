@@ -34,7 +34,7 @@ class ChatScreen extends React.Component {
   }
 
   getToken = async (email) => {
-    const response = await axios.get(`https://lychee-crisp-13295.herokuapp.com//token/${email}`);
+    const response = await axios.get(`https://lychee-crisp-13295.herokuapp.com/token/${email}`);
     const { data } = response;
     return data.token;
   };
