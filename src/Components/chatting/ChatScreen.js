@@ -79,7 +79,7 @@ class ChatScreen extends React.Component {
       // getting list of all messages since this is an existing channel
       const messages = await channel.getMessages();
       
-      console.log("chat screen"+messages.items[0].index)
+
       
       this.setState({ messages: messages.items || [] });
       this.scrollToBottom();

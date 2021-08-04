@@ -73,6 +73,7 @@ class WelcomeScreen extends React.Component {
         const channel = await client.getChannelByUniqueName(items.roomId);
         await this.joinChannel(channel);
         this.setState({ channel, loading: false });
+          
         
       }))
      

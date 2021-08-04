@@ -15,7 +15,7 @@ var firebaseConfig = {
 
   const fire = firebase.initializeApp(firebaseConfig);
   const storage = firebase.storage();
-  // const messaging = firebase.messaging();
+  const messaging = firebase.messaging();
   export {fire, storage as default} ;
 
   // test database
